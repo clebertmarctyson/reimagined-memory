@@ -10,10 +10,10 @@ const PostList = () => {
       .then((data) => {
         setPosts(data);
       });
-  }, [posts]);
+  }, []);
 
   return (
-    <ul>
+    <ul className="rounded-lg p-8 overflow-y-scroll flex flex-col gap-8">
       {posts && posts.map((post, index) => <Post key={index} post={post} />)}
     </ul>
   );
